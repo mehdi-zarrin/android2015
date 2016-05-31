@@ -10,16 +10,26 @@ import android.view.View;
 import com.example.mehdi.android2015.R;
 import com.example.mehdi.android2015.core.ApplicationBase;
 import com.example.mehdi.android2015.views.NavDrawer;
+import com.squareup.otto.Bus;
 
 public abstract class BaseActivity extends AppCompatActivity {
     protected ApplicationBase application;
     protected Toolbar toolbar;
+    public Bus bus;
     NavDrawer navDrawer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         application = (ApplicationBase) getApplication();
+        bus = application.getBus();
+        bus.register(this);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        bus.unregister(this);
     }
 
     @Override

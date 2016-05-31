@@ -6,6 +6,7 @@
         <item name="colorPrimary">#2196F3</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowActionModeOverlay">true</item>
     </style>
 
 </resources>

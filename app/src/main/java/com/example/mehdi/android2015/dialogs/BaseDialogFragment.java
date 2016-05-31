@@ -1,13 +1,11 @@
-package com.example.mehdi.android2015.fragments;
-
+package com.example.mehdi.android2015.dialogs;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
-
+import android.support.v4.app.DialogFragment;
 import com.example.mehdi.android2015.core.ApplicationBase;
 import com.squareup.otto.Bus;
 
-public abstract class BaseFragment extends Fragment {
+public abstract class BaseDialogFragment extends DialogFragment {
     protected ApplicationBase application;
     protected Bus bus;
     @Override
