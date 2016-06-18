@@ -13,7 +13,7 @@ import com.example.mehdi.android2015.views.NavDrawer;
 import com.squareup.otto.Bus;
 
 public abstract class BaseActivity extends AppCompatActivity {
-    protected ApplicationBase application;
+    public ApplicationBase application;
     protected Toolbar toolbar;
     public Bus bus;
     NavDrawer navDrawer;
@@ -30,6 +30,8 @@ public abstract class BaseActivity extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
         bus.unregister(this);
+        if(navDrawer != null)
+            navDrawer.destroy();
     }
 
     @Override
@@ -88,4 +90,7 @@ public abstract class BaseActivity extends AppCompatActivity {
     public interface FadeOutListener {
         void onFadeOutEnd();
     }
+
+
+
 }

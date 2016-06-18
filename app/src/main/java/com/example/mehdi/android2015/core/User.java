@@ -3,6 +3,7 @@ package com.example.mehdi.android2015.core;
 public class User {
     private int id;
     private String name;
+    private String username;
     private String displayName;
     private String avatarUrl;
     private boolean isLoggedIn;
@@ -63,5 +64,13 @@ public class User {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
     }
 }

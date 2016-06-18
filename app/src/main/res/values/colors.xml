@@ -4,4 +4,7 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="primary_color_dark">#2196f3</color>
+    <color name="list_item_message_background_selected">#8C9EfE</color>
+    <color name="list_item_message_background">#EEE</color>
+    <color name="list_item_message_background_unread">#FFF2CF</color>
 </resources>

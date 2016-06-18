@@ -6,6 +6,8 @@ import com.example.mehdi.android2015.core.ApplicationBase;
 
 public class Module {
     public static void register(ApplicationBase application) {
-        Log.e("Module" , "in memory method called");
+        new InMemoryAccountService(application);
+        new InMemoryContactService(application);
+        new InMemoryMessageService(application);
     }
 }

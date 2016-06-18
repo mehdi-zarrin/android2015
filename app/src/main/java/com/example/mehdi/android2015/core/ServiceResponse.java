@@ -36,7 +36,7 @@ public abstract class ServiceResponse {
         return propertyErrors.get(property);
     }
 
-    public void setPropertyErrors(String property, String error) {
+    public void setPropertyError(String property, String error) {
         this.propertyErrors.put(property, error);
     }
 

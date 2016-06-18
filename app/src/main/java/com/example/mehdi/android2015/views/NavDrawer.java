@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.widget.Toolbar;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -39,7 +38,7 @@ public class NavDrawer {
                 setOpen(!isOpen());
             }
         });
-
+//        activity.application.getBus().register(this);
     }
 
     public void addItem(NavDrawerItem item){
@@ -67,6 +66,10 @@ public class NavDrawer {
         for(NavDrawerItem item : items) {
             item.inflate(inflater, navDrawerView);
         }
+    }
+
+    public void destroy() {
+//        activity.application.getBus().unregister(this);
     }
 
 

@@ -1,6 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.mehdi.android2015">
 
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+
     <application
         android:name=".core.ApplicationBase"
         android:allowBackup="true"
@@ -18,8 +20,13 @@
         <activity android:name=".activities.LoginActivity" />
         <activity android:name=".activities.LoginNarrowActivity" />
         <activity android:name=".activities.RegisterActivity" />
+        <activity android:name=".activities.AuthenticationActivity" android:noHistory="true"/>
 
         <activity android:name=".activities.ProfileActivity" />
+        <activity android:name=".activities.ContactsActivity" />
+        <activity android:name=".activities.AddContactActivity" />
+        <activity android:name=".activities.ContactActivity" />
+        <activity android:name=".activities.SentMessages" />
         <activity android:name="com.soundcloud.android.crop.CropImageActivity" />
     </application>
 

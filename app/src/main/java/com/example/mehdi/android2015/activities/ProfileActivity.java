@@ -106,6 +106,13 @@ public class ProfileActivity extends BaseAuthenticatedActivity implements View.O
         setProgressBarVisible(false);
     }
 
+    @Subscribe
+    public void onUserDetailsUpdated(Account.UserDetailsUpdatedEvent event) {
+        getSupportActionBar().setTitle(event.user.getDisplayName());
+    }
+
+
+
     @Override
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);

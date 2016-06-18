@@ -2,6 +2,7 @@ package com.example.mehdi.android2015.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 
 import com.example.mehdi.android2015.R;
@@ -48,6 +49,8 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
     }
 
     private void finishLogin() {
+//        application.getAuth().getUser().setDisplayName("Mehdi Zarrin");
+        Log.e("DDDD" , "Login has been finished !");
         startActivity(new Intent(this, MainActivity.class));
         finish();
     }
